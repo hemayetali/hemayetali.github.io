@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CHILL SITE</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .logo {
+            cursor: pointer; 
+        }
+
+        .logo a {
+            text-decoration: none; 
+            color: inherit; 
+        }
+
+        .logo img {
+            max-width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover > ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Contact page specific styles */
+        section {
+            text-align: center;
+            margin: 20px;
+        }
+
+        form {
+            width: 60%;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .confirmation-message {
+            margin-top: 20px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Images/logo.png" alt="CHILL SITE Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            
+            <li><a href="hiking-guides.html">Hiking Guides</a>
+                <ul>
+                    <li><a href="beginners-hikes.html">Beginner's Hikes</a></li>
+                    <li><a href="advanced-trails.html">Advanced Trails</a></li>
+                </ul>
+            </li>
+            <li><a href="gear-guides.html">Gear Guides</a></li>
+            <li><a href="#">Amenities</a>
+                <ul>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? Reach out to us using the form below:</p>
+
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" id="submitBtn">Send Message</button>
+        </form>
+
+        <!-- Google Maps Integration -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27877.889771291717!2d-89.24570444272317!3d48.38285252178844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d5921da47926843%3A0x952446f931e78fc7!2sConfederation%20College!5e0!3m2!1sen!2sca!4v1701966196647!5m2!1sen!2sca" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Confirmation Message -->
+        <p class="confirmation-message" id="confirmationMessage"></p>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="hiking-guides.html">Hiking Guides</a></li>
+                <li><a href="gear-guides.html">Gear Guides</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Connect with Us</h3>
+            <ul class="social-media">
+                <li><a href="#" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="post" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copyright and Disclaimer -->
+    <div class="footer-bottom">
+        <p>&copy; 2023 CHILL SITE. All rights reserved. | Disclaimer: This website is for demonstration purposes only.</p>
+    </div>
+</footer>
+
+<!-- Google Maps API Script -->
+<script>
+    function initMap() {
+        var mapOptions = {
+            center: {lat: 37.7749, lng: -122.4194}, 
+            zoom: 14,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        // marker at the specified location
+        var marker = new google.maps.Marker({
+            position: {lat: 37.7749, lng: -122.4194}, 
+            map: map,
+            title: 'CHILL SITE Location'
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Perform form validation
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        if (name === '' || email === '' || message === '') {
+            alert('Please fill out all fields.');
+            return;
+        }
+
+        var confirmationMessage = document.getElementById('confirmationMessage');
+        confirmationMessage.innerHTML = 'Thank you, ' + name + '! Your message has been sent successfully.';
+    });
+</script>
+
+</body>
+</html>

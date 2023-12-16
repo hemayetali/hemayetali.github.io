@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title - CHILL SITE</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .logo {
+            cursor: pointer; 
+        }
+
+        .logo img {
+            max-width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover > ul {
+            display: flex;
+            flex-direction: column;
+        }
+        .dish img {
+            max-width: 300px; 
+            height: auto;
+        }
+
+        .dish-details {
+            animation: swing 2s ease-in-out 1s alternate; 
+            transform-origin: top; 
+        }
+
+        @keyframes swing {
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(10deg);
+            }
+            50% {
+                transform: rotate(-10deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo" onclick="goToHomePage()">
+        <img src="Images/logo.png" alt="CHILL SITE Logo">
+    </div>
+    <nav>
+        <ul>
+            
+            <li><a href="hiking-guides.html">Hiking Guides</a>
+                <ul>
+                    <li><a href="beginners-hikes.html">Beginner's Hikes</a></li>
+                    <li><a href="advanced-trails.html">Advanced Trails</a></li>
+                </ul>
+            </li>
+            <li><a href="gear-guides.html">Gear Guides</a></li>
+            <li><a href="#">Amenities</a>
+                <ul>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<main>
+    <section id="food-gallery">
+        <h1>Hiking Food Gallery</h1>
+
+        <div class="dish">
+            <img src="Images/dish1.jpg" alt="Dish 1">
+            <div class="dish-details">
+                <h2>Breakfast</h2>
+                <p>Elevate your camping breakfast with our guide to delicious egg bread recipes. From savory twists on classic French toast to inventive campfire creations, discover easy ways to enjoy the warmth and satisfaction of egg-infused bread under the open sky. Turn your campsite into a culinary haven with these simple and flavorful breakfast ideas.</p>
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="Images/dish2.jpg" alt="Dish 2">
+            <div class="dish-details">
+                <h2>Fried Fish</h2>
+                <p>Transform your camping experience with the savory delight of freshly fried fish. Explore our guide to frying fish at the campsite, providing tips for choosing the right equipment and creating a delicious, crispy catch. Elevate your outdoor dining with the irresistible flavors of campfire-cooked fish.</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="Images/dish3.jpg" alt="Dish 3">
+            <div class="dish-details">
+                <h2>Pasta</h2>
+                <p>Elevate your camping culinary experience with our guide to hassle-free pasta preparations. From one-pot wonders to inventive campfire recipes, discover easy ways to enjoy comforting pasta dishes amidst the great outdoors. Bring the taste of home to your campsite with these simple and satisfying pasta ideas.</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="Images/dish4.jpg" alt="Dish 4">
+            <div class="dish-details">
+                <h2>Hot Dogs</h2>
+                <p>Elevate your camping cookout with our guide to perfect hot dog preparation. Discover tips for grilling over an open flame or using portable stoves, ensuring your camping experience is filled with the classic, savory delight of perfectly cooked hot dogs. Enjoy the simplicity and deliciousness of hot dogs in the great outdoors.</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="Images/dish5.jpg" alt="Dish 5">
+            <div class="dish-details">
+                <h2>Pizza</h2>
+                <p>Savor the joy of pizza under the stars with our camping-friendly recipes. Explore creative ways to make delicious pizzas over a campfire or using portable cookware. Elevate your camping cuisine with the unmistakable flavors of a homemade camping pizza night.</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="Images/dish6.jpg" alt="Dish 6">
+            <div class="dish-details">
+                <h2>Salad</h2>
+                <p>"Bring a burst of freshness to your camping meals with our guide to easy and delicious salad preparations. From simple greens to creative combinations, discover ways to create refreshing salads that complement your outdoor adventure. Elevate your camping cuisine with the crisp, vibrant flavors of homemade salads."</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="Images/dish7.jpg" alt="Dish 7">
+            <div class="dish-details">
+                <h2>Baked Items</h2>
+                <p>Indulge in the warmth of freshly baked delights on your camping escapade. Our guide to camping bakery treats offers simple recipes and tips to bring the aroma of homemade pastries or bread to the great outdoors. Elevate your camping experience with the comfort of oven-fresh goodness.</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="Images/dish8.jpg" alt="Dish 8">
+            <div class="dish-details">
+                <h2>Fruits</h2>
+                <p>Add a burst of freshness to your camping experience with our guide to enjoying fruits on campus. From convenient snacks to creative campfire desserts, discover ways to savor nature's bounty under the open sky. Elevate your camping adventure with the natural sweetness and vitality of fresh fruits.</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="Images/dish9.jpg" alt="Dish 9">
+            <div class="dish-details">
+                <h2>Coffee/Tea</h2>
+                <p>Brew the perfect cup of serenity in the midst of nature. Discover our camping tea and coffee essentials, ensuring your mornings in the wilderness are filled with the comforting aroma and warmth of your favorite brew. Elevate your camping experience sip by sip.</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="Images/dish10.jpg" alt="Dish 10">
+            <div class="dish-details">
+                <h2>Sweet Corn</h2>
+                <p>Sweet corn on camping – a simple delight under the open sky. Explore our tips and recipes for perfectly grilled or fire-roasted corn, adding a touch of sweetness to your outdoor adventure. Elevate your camping cuisine with the natural flavors of fresh, sweet corn.</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="Images/dish11.jpg" alt="Dish 11">
+            <div class="dish-details">
+                <h2>Home made Food</h2>
+                <p>Experience the joy of homemade meals while camping. Our guides help you bring the comfort of home to the great outdoors, offering simple and delicious recipes that make camp cooking a delightful adventure. Elevate your camping experience with the warmth and flavor of homemade food under the open sky.</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="Images/dish12.jpg" alt="Dish 12">
+            <div class="dish-details">
+                <h2>Plant Based Food</h2>
+                <p>Exploring new cultures brings immense joy, yet the physical act of travel can be tiring with limited food choices. Despite dietary changes, staying well-fed on planes remains crucial. Let's make the journey delicious and energizing, even with a plant-based approach.</p>
+            </div>
+        </div>
+        
+
+    </section>
+</main>
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="hiking-guides.html">Hiking Guides</a></li>
+                <li><a href="gear-guides.html">Gear Guides</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Connect with Us</h3>
+            <ul class="social-media">
+                <li><a href="#" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="post" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copyright and Disclaimer -->
+    <div class="footer-bottom">
+        <p>&copy; 2023 CHILL SITE. All rights reserved. | Disclaimer: This website is for demonstration purposes only.</p>
+    </div>
+</footer>
+
+<script>
+    // Function to handle redirection to the home page
+    function goToHomePage() {
+        window.location.href = "index.html";
+    }
+</script>
+
+</body>
+</html>

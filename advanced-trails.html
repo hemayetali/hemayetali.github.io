@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Trails - CHILL SITE</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+       
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: inherit; 
+        }
+
+        .logo img {
+            max-width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover > ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+    .tips-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Images/logo.png" alt="CHILL SITE Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            
+            <li><a href="hiking-guides.html">Hiking Guides</a>
+                <ul>
+                    <li><a href="beginners-hikes.html">Beginner's Hikes</a></li>
+                    <li><a href="advanced-trails.html">Advanced Trails</a></li>
+                </ul>
+            </li>
+            <li><a href="gear-guides.html">Gear Guides</a></li>
+            <li><a href="#">Amenities</a>
+                <ul>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+    <section>
+        
+        <h1>Advanced Trails</h1>
+        <p>Explore challenging and breathtaking advanced trails for experienced hikers.</p>
+
+        <!-- Featured Trail 1 -->
+        <div class="featured-trail" onclick="openPopup('popup1')">
+            <img src="Images/trail1.jpg" alt="Trail 1" style="max-width: 400px; height: auto;">
+            <div class="trail-details">
+                <h2>Peak Mountain Trail</h2>
+                <p>Experience the thrill of ascent on our Peak Mountain Trail. This intermediate-level hike invites you to conquer heights, revel in panoramic views, and savor the triumph of reaching the peak.</p>
+                <a href="#" class="cta-button">Read More</a>
+            </div>
+        </div>
+
+        <!-- Featured Trail 2 -->
+        <div class="featured-trail" onclick="openPopup('popup2')">
+            <img src="Images/trail2.jpg" alt="Trail 2" style="max-width: 400px; height: auto;">
+            <div class="trail-details">
+                <h2>Waterfall Trail</h2>
+                <p>"Chase the melody of nature on our Waterfall Trail. An easy-going path unveils the magic of cascading waters tucked in scenic surroundings.</p>
+                <a href="#" class="cta-button">Read More</a>
+            </div>
+        </div>
+
+      
+
+    </section>
+
+    <!-- Expert Tips Section -->
+    <section class="tips-section">
+        <h2>Expert Tips for Advanced Hikers</h2>
+        <ul>
+            <li>Carry a GPS device for precise navigation.</li>
+            <li>Pack sufficient emergency supplies.</li>
+            <li>Check weather conditions and trail reports.</li>
+            
+        </ul>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2>Experience Advanced Trails - Video Guides</h2>
+        <div class="video-container">
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HYdYCeBAkK8?si=0X6eA7vpTY56sGj2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+
+</main>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="hiking-guides.html">Hiking Guides</a></li>
+                <li><a href="gear-guides.html">Gear Guides</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Connect with Us</h3>
+            <ul class="social-media">
+                <li><a href="#" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="post" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copyright and Disclaimer -->
+    <div class="footer-bottom">
+        <p>&copy; 2023 CHILL SITE. All rights reserved. | Disclaimer: This website is for demonstration purposes only.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

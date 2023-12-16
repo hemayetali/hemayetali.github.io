@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CHILL SITE</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .logo {
+            cursor: pointer; 
+        }
+
+        .logo a {
+            text-decoration: none; 
+            color: inherit; 
+        }
+
+        .logo img {
+            max-width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover > ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+       
+        section {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .team-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            width: 30%;
+            margin: 20px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .team-member-details {
+            padding: 15px;
+        }
+
+        .timeline {
+            margin-top: 50px;
+        }
+
+        .event {
+            margin-bottom: 30px;
+        }
+
+        .event h3 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Images/logo.png" alt="CHILL SITE Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            
+            <li><a href="hiking-guides.html">Hiking Guides</a>
+                <ul>
+                    <li><a href="beginners-hikes.html">Beginner's Hikes</a></li>
+                    <li><a href="advanced-trails.html">Advanced Trails</a></li>
+                </ul>
+            </li>
+            <li><a href="gear-guides.html">Gear Guides</a></li>
+            <li><a href="#">Amenities</a>
+                <ul>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h1>About Us</h1>
+        <p>Welcome to CHILL SITE, your ultimate guide to outdoor adventures!</p>
+
+        <div class="team-section">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <img src="Images/member1.jpeg" alt="Team Member 1">
+                <div class="team-member-details">
+                    <h3>Hemayet Ali</h3>
+                    <p>Founder & CEO</p>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <img src="Images/member2.jpeg" alt="Team Member 2">
+                <div class="team-member-details">
+                    <h3>Hemayet Ali</h3>
+                    <p>Head of Content</p>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <img src="Images/member3.jpeg" alt="Team Member 3">
+                <div class="team-member-details">
+                    <h3>Hemayet Ali</h3>
+                    <p>Lead Developer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <div class="event">
+                <h3>Establishment of CHILL SITE</h3>
+                <p>CHILL SITE was founded in 2023 for the Purpose of the Web Development Project</p>
+            </div>
+
+            <div class="event">
+                <h3>Expansion of Content</h3>
+                <p>Over the years, we have expanded our content to include comprehensive hiking guides and gear recommendations.</p>
+            </div>
+
+            <div class="event">
+                <h3>Community Engagement</h3>
+                <p>We are proud to have a thriving community of hikers who share their experiences and tips with fellow outdoor enthusiasts.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="hiking-guides.html">Hiking Guides</a></li>
+                <li><a href="gear-guides.html">Gear Guides</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Connect with Us</h3>
+            <ul class="social-media">
+                <li><a href="#" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="post" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copyright and Disclaimer -->
+    <div class="footer-bottom">
+        <p>&copy; 2023 CHILL SITE. All rights reserved. | Disclaimer: This website is for demonstration purposes only.</p>
+    </div>
+</footer>
+</body>
+</html>

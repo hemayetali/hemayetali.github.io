@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's Hikes - CHILL SITE</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0; 
+            padding: 0; 
+            /* background: url('Images/background.jpg') center/cover; */ 
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9); 
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: inherit; 
+        }
+
+        .logo img {
+            max-width: 80px; 
+            height: auto; 
+            margin-right: 20px; 
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px; 
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333; 
+            font-weight: bold;
+            font-size: 16px; 
+        }
+
+        /* Dropdown styles */
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover > ul {
+            display: flex;
+            flex-direction: column;
+        }
+        .tips-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.medium-button {
+    padding: 10px 20px; 
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.medium-button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Images/logo.png" alt="CHILL SITE Logo"> 
+        </a>
+    </div>
+    <nav>
+        <ul>
+            
+            <li><a href="#">Hiking Guides</a>
+                <ul>
+                    <li><a href="beginners-hikes.html">Beginner's Hikes</a></li>
+                    <li><a href="advanced-trails.html">Advanced Trails</a></li>
+                </ul>
+            </li>
+            <li><a href="gear-guides.html">Gear Guides</a></li>
+            <li><a href="#">Amenities</a>
+                <ul>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+    <section>
+        
+        <h1>Beginner's Hikes</h1>
+        <p>Explore our recommended beginner-friendly hiking trails.</p>
+
+        <!-- Featured Hike 1 -->
+        <div class="featured-hike">
+            <img src="Images/hike1.gif" alt="Hike 1">
+            <div class="hike-details">
+                <h2>Hiking with experts</h2>
+                <p>Step into adventure with our hiking experiences. Explore scenic trails, breathe in nature's beauty, and create lasting memories with each step.</p>
+                <a href="#" class="cta-button" style="margin-top: 10px;">Read More</a>
+            </div>
+        </div>
+         
+
+       <!-- Featured Hike 2 -->
+<div class="featured-hike" onclick="openPopup('popup2')">
+    <img src="Images/hike2.jpg" alt="Hike 2" style="max-width: 400px; height: auto;">
+    <div class="hike-details">
+        <h2>Serene Meadow Trail</h2>
+        <p>Discover the wonders of nature on our 'Serene Meadow Trail.' Perfect for beginners, this gentle path guides you through lush landscapes and open meadows, offering a serene and accessible hiking experience.</p>
+        <a href="#" class="cta-button medium-button" style="margin-top: 10px;">Read More</a>
+    </div>
+</div>
+    </section>
+
+    <!-- Advanced Tips Section -->
+    <section class="tips-section" onclick="openPopup('popup3')">
+        <h2>Advanced Tips for Beginner Hikers</h2>
+        <ul>
+            <li>Utilize trekking poles for added stability.</li>
+            <li>Bring a lightweight, portable first aid kit.</li>
+            <li>Learn basic navigation skills using a map and compass.</li>
+            
+        </ul>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2>Explore Beginner's Hikes - Video Guides</h2>
+        <div class="video-container">
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/edElLWvSVLk?si=V7Tr6DLE9D-1Av6B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+</main>
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="hiking-guides.html">Hiking Guides</a></li>
+                <li><a href="gear-guides.html">Gear Guides</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Connect with Us</h3>
+            <ul class="social-media">
+                <li><a href="#" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="post" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copyright and Disclaimer -->
+    <div class="footer-bottom">
+        <p>&copy; 2023 CHILL SITE. All rights reserved. | Disclaimer: This website is for demonstration purposes only.</p>
+    </div>
+</footer>
+</body>
+</html>

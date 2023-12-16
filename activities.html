@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - CHILL SITE</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .logo img {
+            max-width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover > ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Additional Styles for Activities Page */
+        section {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .scheduler {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .activity-item {
+            width: calc(30% - 40px); /* 30% width with 40px margin */
+            margin: 20px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .activity-item:hover {
+            transform: scale(1.05);
+        }
+
+        .activity-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .activity-item-details {
+            padding: 15px;
+        }
+
+        .participation-form {
+            margin: 40px auto;
+            text-align: left;
+            width: 50%;
+            border: 1px solid #e0cc1f;
+            padding: 60px;
+            background: #fbf6ca;
+        }
+
+        .participation-form h2{
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .participation-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .participation-form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        .participation-form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .participation-form button:hover {
+            background-color: #45a049; 
+        }
+
+        .checkbox-label {
+            position: relative;
+            display: block;
+            margin-bottom: 16px;
+            padding-left: 30px; 
+            cursor: pointer;
+        }
+
+        .checkbox-label input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+        }
+
+        .checkbox-label:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+
+        .checkbox-label input:checked ~ .checkmark {
+            background-color: #4CAF50;
+            border: 1px solid #4CAF50;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .checkbox-label input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .checkbox-label .checkmark:after {
+            left: 7px;
+            top: 3px;
+            width: 6px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Images/logo.png" alt="CHILL SITE Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="hiking-guides.html">Hiking Guides</a>
+                <ul>
+                    <li><a href="beginners-hikes.html">Beginner's Hikes</a></li>
+                    <li><a href="advanced-trails.html">Advanced Trails</a></li>
+                </ul>
+            </li>
+            <li><a href="gear-guides.html">Gear Guides</a></li>
+            <li><a href="#">Amenities</a>
+                <ul>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        
+        <h1>Activities</h1>
+        <p>Discover exciting activities to enhance your camping and hiking experience.</p>
+
+        <!-- Scheduler -->
+        <div class="scheduler">
+            <!-- First Row of Activities -->
+            <div class="activity-item" onclick="showActivityDetails('Hiking Tour', '2023-12-15T10:00', 'Explore scenic trails on our guided hiking tour.', 'Location: Mountain Valley')">
+                <img src="Images/activity1.jpg" alt="Hiking Tour">
+                <div class="activity-item-details">
+                    <h3>Hiking Tour</h3>
+                    <p>Date: December 15, 2023</p>
+                    <p>Time: 10:00 AM</p>
+                </div>
+            </div>
+
+            <div class="activity-item" onclick="showActivityDetails('Campfire Night', '2023-12-20T19:30', 'Enjoy a cozy night with a campfire and storytelling.', 'Location: Campfire Area')">
+                <img src="Images/activity2.jpg" alt="Campfire Night">
+                <div class="activity-item-details">
+                    <h3>Campfire Night</h3>
+                    <p>Date: December 20, 2023</p>
+                    <p>Time: 7:30 PM</p>
+                </div>
+            </div>
+
+            <div class="activity-item" onclick="showActivityDetails('Yoga Retreat', '2023-12-25T08:00', 'Relax and rejuvenate with a morning yoga session.', 'Location: Yoga Pavilion')">
+                <img src="Images/activity3.jpg" alt="Yoga Retreat">
+                <div class="activity-item-details">
+                    <h3>Yoga Retreat</h3>
+                    <p>Date: December 25, 2023</p>
+                    <p>Time: 8:00 AM</p>
+                </div>
+            </div>
+
+            <!-- Second Row of Activities -->
+            <div class="activity-item" onclick="showActivityDetails('Yoga Retreat', '2023-12-25T08:00', 'Relax and rejuvenate with a morning yoga session.', 'Location: Yoga Pavilion')">
+                <img src="Images/activity4.gif" alt="Yoga Retreat">
+                <div class="activity-item-details">
+                    <h3>Yoga Retreat</h3>
+                    <p>Date: December 25, 2023</p>
+                    <p>Time: 8:00 AM</p>
+                </div>
+            </div>
+
+            <div class="activity-item" onclick="showActivityDetails('Yoga Retreat', '2023-12-25T08:00', 'Relax and rejuvenate with a morning yoga session.', 'Location: Yoga Pavilion')">
+                <img src="Images/activity5.gif" alt="Yoga Retreat">
+                <div class="activity-item-details">
+                    <h3>Yoga Retreat</h3>
+                    <p>Date: December 25, 2023</p>
+                    <p>Time: 8:00 AM</p>
+                </div>
+            </div>
+
+            <div class="activity-item" onclick="showActivityDetails('Yoga Retreat', '2023-12-25T08:00', 'Relax and rejuvenate with a morning yoga session.', 'Location: Yoga Pavilion')">
+                <img src="Images/activity6.gif" alt="Yoga Retreat">
+                <div class="activity-item-details">
+                    <h3>Yoga Retreat</h3>
+                    <p>Date: December 25, 2023</p>
+                    <p>Time: 8:00 AM</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Participation Form -->
+        <div class="participation-form">
+            <h2>Participate in an Activity</h2>
+            <form id="participationForm">
+                <!-- New Fields -->
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Existing Fields -->
+                <label for="activityName">Activity Name:</label>
+                <input type="text" id="activityName" name="activityName" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+
+                <!-- Updated Checkbox -->
+                <label class="checkbox-label" for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <span class="checkmark"></span>
+                    I agree to the terms and conditions
+                </label>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="hiking-guides.html">Hiking Guides</a></li>
+                <li><a href="gear-guides.html">Gear Guides</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Connect with Us</h3>
+            <ul class="social-media">
+                <li><a href="#" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="post" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copyright and Disclaimer -->
+    <div class="footer-bottom">
+        <p>&copy; 2023 CHILL SITE. All rights reserved. | Disclaimer: This website is for demonstration purposes only.</p>
+    </div>
+</footer>
+
+<!-- Script for Showing Activity Details -->
+<script>
+    function showActivityDetails(name, date, description, location) {
+        alert(`Activity: ${name}\nDate: ${date}\nDescription: ${description}\nLocation: ${location}`);
+    }
+
+    // Function to handle form submission (you can replace this with your server-side logic)
+    document.getElementById('participationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission (for demonstration purposes)
+        alert('Form submitted!'); // Replace this with your own logic
+        location.reload();
+    });
+</script>
+
+</body>
+</html>

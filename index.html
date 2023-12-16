@@ -1,62 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Lighthouse Bistro</title>
-<meta charset="utf-8">
-<style>
-body { 
-    background-image: url(background.jpg);
-    font-family: Arial, Verdana, sans-serif;
-}
-h1 { 
-    background-image: url(lighthouselogo.jpg);
-    background-color: #9DB3DC;
-    background-repeat: no-repeat;
-    height: 100px; 
-    font-size: 3em;
-    padding-left: 150px; 
-    padding-top: 30px; 
-    border-radius: 15px;
-    margin-top: 0;
-}
-#container { 
-    background-color: #FFFFFF;              
-    padding: 2em; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 80%;             
-    min-width: 800px;
-}
-h2 { 
-    color: #000033; 
-    font-family: arial, sans-serif;
-}
-footer { 
-    font-size: .80em;
-    font-style: italic;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHILL SITE - Your Camping and Hiking Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+    <style>
+        
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; 
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: inherit; 
+        }
+
+        .logo img {
+            max-width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover > ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Home page specific styles */
+        section {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .featured-content {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .featured-item {
+            width: calc(30% - 40px); 
+            margin: 20px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .featured-item:hover {
+            transform: scale(1.05);
+        }
+
+        .featured-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .featured-item-details {
+            padding: 15px;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Green button style */
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50; /* Green color */
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Adjust font for the footer quick links */
+        footer {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        footer .footer-section ul {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
 </head>
 <body>
-<div id="container">
+
 <header>
-<h1>Lighthouse Bistro</h1>
+    <div class="logo">
+        <a href="index.html">
+            <img src="./Images/logo.png" alt="CHILL SITE Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            
+            <li><a href="hiking-guides.html">Hiking Guides</a>
+                <ul>
+                    <li><a href="beginners-hikes.html">Beginner's Hikes</a></li>
+                    <li><a href="advanced-trails.html">Advanced Trails</a></li>
+                </ul>
+            </li>
+            <li><a href="gear-guides.html">Gear Guides</a></li>
+            <li><a href="#">Amenities</a>
+                <ul>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
-<nav>
-    <a href="index.html">Home</a> &nbsp;
-    <a href="menu.html">Menu</a> &nbsp;
-    <a href="directions.html">Directions</a> &nbsp;
-    <a href="contact.html">Contact</a>
-</nav>
-<h2>Locally Roasted Free-Trade Coffee</h2>
-<p>Indulge in the aroma of freshly ground roast coffee. Specialty drinks are available hot or cold.</p>
-<h2>Specialty Pastries</h2>
-<p>Enjoy a selection of our fresh baked, organic pastries, including fresh fruit muffins, scones, croissants, and cinnamon rolls.</p>
-<h2>Lunchtime is Anytime</h2>
-<p>Savor delicious wraps and sandwiches on hearty, whole grain breads with locally grown salad, fruit, and vegetables. </p>
-<footer>
-    Copyright &copy; 2020 Your Name Here
-</footer>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    
+    <div class="hero-background">
+        
+        <img src="Images/hero-image.jpg" alt="Hero Image">
+    </div>
+
+    
+    <div class="hero-content">
+        <h1>Welcome to CHILL SITE</h1>
+        <p>Your go-to resource for camping and hiking adventures!</p>
+        <a href="#featured-content" class="cta-button">Explore Now</a>
+    </div>
 </div>
+<main>
+    <section>
+    
+        <p>Your go-to resource for camping and hiking adventures!</p>
+
+        <!-- Featured Content -->
+        <div class="featured-content">
+            <!-- Featured Item 1 -->
+            <div class="featured-item" onclick="openModal('modal1')">
+                <img src="Images/featured1.jpg" alt="Featured Item 1">
+                <div class="featured-item-details">
+                    <h3>Explore New Trails</h3>
+                    <p>Discover the beauty of nature with our curated trail guides.</p>
+                </div>
+            </div>
+
+            <!-- Featured Item 2 -->
+            <div class="featured-item" onclick="openModal('modal2')">
+                <img src="Images/featured2.gif" alt="Featured Item 2">
+                <div class="featured-item-details">
+                    <h3>Amazing Hiking Trips Experiance</h3>
+                    <p>Experience the thrill of amazing hiking trips with us. Traverse picturesque trails surrounded by nature's wonders, conquer challenging peaks with expert guides, and revel in the joy of reaching new heights. Join us for unforgettable adventures that blend breathtaking landscapes with the excitement of exploration.</p>
+                </div>
+            </div>
+
+            <!-- Featured Item 3 -->
+            <div class="featured-item" onclick="openModal('modal3')">
+                <img src="Images/featured3.jpg" alt="Featured Item 3">
+                <div class="featured-item-details">
+                    <h3>Join Our Hiking Community</h3>
+                    <p>Connect with fellow outdoor enthusiasts and share your experiences.</p>
+                </div>
+            </div>
+
+            <!-- Featured Item 4 -->
+            <div class="featured-item" onclick="openModal('modal4')">
+                <img src="Images/featured4.gif" alt="Featured Item 4">
+                <div class="featured-item-details">
+                    <h3>Adventure Views</h3>
+                    <p>Watch thrilling scenes of epic hiking adventures around the world.</p>
+                </div>
+            </div>
+
+            <!-- Featured Item 5 -->
+            
+<div class="featured-item">
+    <label for="fileInput" onclick="openModal('modal5')">
+        <img id="previewImage" src="Images/placeholder.gif" alt="Featured Item 5">
+        <div class="featured-item-details">
+            <h3>Scenic Waterfalls</h3>
+            <p>Immerse yourself in breathtaking waterfalls captured during our hikes.</p>
+        </div>
+    </label>
+    <input type="file" id="fileInput" style="display: none" accept=".gif" onchange="readURL(this)">
+</div>
+
+            <!-- Featured Item 6 -->
+            <div class="featured-item" onclick="openModal('modal6')">
+                <img src="Images/featured6.gif" alt="Featured Item 6">
+                <div class="featured-item-details">
+                    <h3>Mountain View</h3>
+        <p>Embrace nature's majesty at our Mountain View campsite. Spectacular peaks, crisp air, and unforgettable moments await!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call-to-Action Section -->
+        <div class="call-to-action">
+            <p class="cta-text">Ready to embark on your next adventure?</p>
+            <a href="hiking-guides.html" class="cta-button">Explore Hiking Guides</a>
+        </div>
+    </section>
+   
+</main>
+
+<!-- Modals for Featured Items -->
+<div id="modal1" class="modal" onclick="closeModal('modal1')">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+        <h2>Explore New Trails</h2>
+        <p>Discover the beauty of nature with our curated trail guides. Whether you're a beginner or an experienced hiker, we have the perfect trails for you.</p>
+       
+    </div>
+</div>
+
+<div id="modal2" class="modal" onclick="closeModal('modal2')">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+        <h2>Top Gear Recommendations</h2>
+        <p>Find the best gear for your outdoor adventures with our expert reviews. We provide in-depth insights into the latest hiking and camping gear to enhance your experience.</p>
+        
+    </div>
+</div>
+
+<div id="modal3" class="modal" onclick="closeModal('modal3')">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+        <h2>Join Our Hiking Community</h2>
+        <p>Connect with fellow outdoor enthusiasts and share your experiences. Our community is a place to exchange tips, stories, and make lasting connections with like-minded individuals.</p>
+        
+    </div>
+</div>
+<!-- Modals for Featured Items -->
+<div id="modal4" class="modal" onclick="closeModal('modal4')">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+        <h2>Adventure Videos</h2>
+        <p>Watch thrilling videos of epic hiking adventures around the world. Get inspired for your next journey!</p>
+        
+    </div>
+</div>
+
+<div id="modal5" class="modal" onclick="closeModal('modal5')">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+        <h2>Scenic Landscapes</h2>
+        <p>Immerse yourself in breathtaking landscapes captured during our hikes. Experience the beauty of nature like never before.</p>
+        
+        
+        <img id="modalGIF" src="" alt="Hiking Essentials GIF" style="max-width: 100%; max-height: 300px;">
+
+        
+    </div>
+</div>
+
+<div id="modal6" class="modal" onclick="closeModal('modal6')">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+        <h2>Mountain View</h2>
+        <p>Explore the hiking journey. Choose the right steps for a successful adventure!</p>
+       
+    </div>
+</div>
+
+<script>
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'flex';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+    <!-- JavaScript to Preview the Image/GIF -->
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                document.getElementById('previewImage').src = e.target.result;
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+</script>
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="hiking-guides.html">Hiking Guides</a></li>
+                <li><a href="gear-guides.html">Gear Guides</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Connect with Us</h3>
+            <ul class="social-media">
+                <li><a href="#" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="post" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copyright and Disclaimer -->
+    <div class="footer-bottom">
+        <p>&copy; 2023 CHILL SITE. All rights reserved. | Disclaimer: This website is for demonstration purposes only.</p>
+    </div>
+</footer>
+
 </body>
 </html>

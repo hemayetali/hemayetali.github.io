@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear Guides - CHILL SITE</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .logo img {
+            max-width: 80px;
+            height: auto;
+            margin-right: 20px;
+            cursor: pointer; 
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover > ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Gear Showcase Styles */
+        .gear-showcase {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .gear-item {
+            width: 30%;
+            margin: 10px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gear-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gear-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .gear-item h2 {
+            margin: 15px;
+            font-size: 18px;
+        }
+
+        .gear-item p {
+            margin: 0 15px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .cta-button {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            background-color: #4CAF50; 
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049; 
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+        }
+
+    
+    .gear-showcase {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .gear-item {
+        flex-grow: 1;
+        width: 30%; 
+        margin-bottom: 20px; 
+    }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo" onclick="goToHomePage()">
+        <img src="Images/logo.png" alt="CHILL SITE Logo">
+    </div>
+    <nav>
+        <ul>
+            
+            <li><a href="hiking-guides.html">Hiking Guides</a>
+                <ul>
+                    <li><a href="beginners-hikes.html">Beginner's Hikes</a></li>
+                    <li><a href="advanced-trails.html">Advanced Trails</a></li>
+                </ul>
+            </li>
+            <li><a href="gear-guides.html">Gear Guides</a></li>
+            <li><a href="#">Amenities</a>
+                <ul>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+       
+        <h1>Gear Guides</h1>
+        <p>Discover the essential gear and equipment for your camping and hiking needs.</p>
+
+        <!-- Gear Showcase -->
+        <div class="gear-showcase">
+            <!-- Gear Item 1 -->
+            <div class="gear-item">
+                <img src="Images/gear1.jpg" alt="Gear 1">
+                <h2>High-Performance Backpack</h2>
+                <p>An ergonomic and durable backpack for all your hiking adventures. Spacious compartments, water-resistant material, and adjustable straps.</p>
+                
+            </div>
+
+            <!-- Gear Item 2 -->
+            <div class="gear-item">
+                <img src="Images/gear2.jpg" alt="Gear 2">
+                <h2>All-Weather Sleeping Bag</h2>
+                <p>Stay warm and comfortable during chilly nights. This sleeping bag is designed for various weather conditions, ensuring a good night's sleep.</p>
+                
+            </div>
+
+            <!-- Gear Item 3 -->
+            <div class="gear-item">
+                <img src="Images/gear3.jpg" alt="Gear 3">
+                <h2>Waterproof Hiking Boots</h2>
+                <p>Durable and waterproof hiking boots for any terrain. Provides excellent support and traction, keeping your feet dry and comfortable.</p>
+                
+            </div>
+            <!-- Gear Item 4 -->
+            <div class="gear-item">
+                <img src="Images/gear4.jpg" alt="Gear 4">
+                <h2>Outdoor Cookware</h2>
+                <p>Master the art of outdoor cooking with our concise Outdoor Cookware Guides. From pots to pans, find the gear you need for flavorful adventures. Explore now!</p>
+                
+            </div>
+            <!-- Gear Item 5 -->
+            <div class="gear-item">
+                <img src="Images/gear5.jpg" alt="Gear 5">
+                <h2>Hiking Equipments</h2>
+                <p>Gear up for your next hike with our concise Hiking Equipment Guides. From backpacks to footwear, we've got you covered. Elevate your adventure with informed gear choices – explore now!</p>
+                
+            </div>
+            <!-- Gear Item 6 -->
+            <div class="gear-item">
+                <img src="Images/gear6.jpg" alt="Gear 6">
+                <h2>Waterproof Hiking Jackets</h2>
+                <p>Elevate your hike with the perfect jacket. Explore our Hiking Jackets Guide for top recommendations, ensuring comfort and performance on every trail. Gear up now!</p>
+                
+            </div>
+
+          
+
+        </div>
+      
+
+        <!-- Modal for Gear Details -->
+       <div class="modal" id="gearModal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeGearModal()">&times;</span>
+        <h2>Gear Details</h2>
+        <p id="gearDetails">Brief information about the gear.</p>
+    </div>
+</div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="hiking-guides.html">Hiking Guides</a></li>
+                <li><a href="gear-guides.html">Gear Guides</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Connect with Us</h3>
+            <ul class="social-media">
+                <li><a href="#" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="post" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+   
+    <div class="footer-bottom">
+        <p>&copy; 2023 CHILL SITE. All rights reserved. | Disclaimer: This website is for demonstration purposes only.</p>
+    </div>
+</footer>
+
+
+
+
+<!-- Modal for Gear Details -->
+<script>
+    // Function to open the gear modal
+    function openGearModal() {
+        var modal = document.getElementById("gearModal");
+        modal.style.display = "flex";
+    }
+
+    // Function to close the gear modal
+    function closeGearModal() {
+        var modal = document.getElementById("gearModal");
+        modal.style.display = "none";
+        resetGearDetails(); 
+    }
+
+    // Function to update and display gear details
+    function showGearDetails(gearName, gearDescription) {
+        var gearDetails = document.getElementById("gearDetails");
+        gearDetails.innerHTML = `<strong>${gearName}</strong><br>${gearDescription}`;
+        openGearModal();
+    }
+
+    // Function to reset gear details in the modal
+    function resetGearDetails() {
+        var gearDetails = document.getElementById("gearDetails");
+        gearDetails.innerHTML = "Brief information about the gear.";
+    }
+
+    // Function to handle redirection to the home page
+    function goToHomePage() {
+        window.location.href = "index.html";
+    }
+</script>
+</body>
+</html>
